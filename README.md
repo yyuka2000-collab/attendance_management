@@ -18,9 +18,9 @@ coachtech 勤怠管理アプリ
 1. リポジトリをクローン
 
 ```bash
-git clone git@github.com:your-username/attendance_management.git
+git clone git@github.com:yyuka2000-collab/attendance_management.git
 または
-git clone https://github.com/your-username/attendance_management.git
+git clone https://github.com/yyuka2000-collab/attendance_management.git
 
 cd attendance_management
 ```
