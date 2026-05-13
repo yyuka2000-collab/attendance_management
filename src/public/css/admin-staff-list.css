@@ -1,0 +1,180 @@
+/* =========================================
+   admin-staff-list.css – 管理者 スタッフ一覧画面
+   ========================================= */
+
+/* メインレイアウト */
+.staff-main {
+    background-color: #f5f5f5;
+    min-height: calc(100vh - 63px);
+    padding: 60px 20px 80px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.staff-container {
+    width: 100%;
+    max-width: 820px;
+}
+
+/* ページタイトル行 */
+.staff-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+
+/* ページタイトル */
+.staff-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1c1c1c;
+    margin-bottom: 0;
+    padding-left: 14px;
+    border-left: 4px solid #1c1c1c;
+    letter-spacing: 0.03em;
+}
+
+/* テーブルラッパー */
+.staff-table-wrapper {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* テーブル */
+.staff-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+/* ヘッダー行 */
+.staff-table thead tr {
+    border-bottom: 1px solid #d0d0d0;
+}
+
+.staff-table__th {
+    padding: 14px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+    text-align: center;
+    letter-spacing: 0.03em;
+    background-color: #fff;
+}
+
+.staff-table__th--name {
+    width: 28%;
+}
+
+.staff-table__th--email {
+    width: 52%;
+}
+
+.staff-table__th--detail {
+    width: 20%;
+}
+
+/* ボディ行 */
+.staff-table__row {
+    border-bottom: 1px solid #ebebeb;
+    transition: background-color 0.15s;
+}
+
+.staff-table__row:last-child {
+    border-bottom: none;
+}
+
+.staff-table__row:hover {
+    background-color: #fafafa;
+}
+
+.staff-table__td {
+    padding: 13px 16px;
+    font-size: 14px;
+    color: #1c1c1c;
+    text-align: center;
+    letter-spacing: 0.02em;
+}
+
+.staff-table__td--name {
+    font-weight: 500;
+        color: #1c1c1c;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+}
+
+.staff-table__td--email {
+    color: #555;
+        font-size: 13px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+}
+
+.staff-table__td--detail {
+    text-align: center;
+}
+
+/* 詳細リンク */
+.staff-table__detail-link {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1c1c1c;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: opacity 0.2s;
+}
+
+.staff-table__detail-link:hover {
+    opacity: 0.5;
+}
+
+/* =========================================
+   レスポンシブ
+   ========================================= */
+
+@media (min-width: 1400px) {
+    .staff-container {
+        max-width: 900px;
+    }
+
+    .staff-main {
+        padding: 72px 40px 80px;
+    }
+}
+
+@media (min-width: 1540px) {
+    .staff-main {
+        padding: 72px 80px 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .staff-main {
+        padding: 32px 16px 60px;
+    }
+
+    .staff-title {
+        font-size: 17px;
+        margin-bottom: 20px;
+    }
+
+    .staff-table__th,
+    .staff-table__td {
+        padding: 10px 8px;
+        font-size: 12px;
+    }
+
+    .staff-table__td--email {
+        font-size: 11px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}

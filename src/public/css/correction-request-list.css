@@ -1,0 +1,199 @@
+/* =========================================
+   correction-request-list.css – 申請一覧画面
+   ========================================= */
+
+/* メインレイアウト */
+.request-main {
+    background-color: #f5f5f5;
+    min-height: calc(100vh - 63px);
+    padding: 60px 20px 80px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.request-container {
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* ページタイトル */
+.request-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1c1c1c;
+    margin-bottom: 28px;
+    padding-left: 14px;
+    border-left: 4px solid #1c1c1c;
+    letter-spacing: 0.03em;
+}
+
+/* タブ（テーブルと独立・背景なし） */
+.request-tabs {
+    display: flex;
+    gap: 0;
+    margin-bottom: 16px;
+    border-bottom: 2px solid #1c1c1c;
+    background-color: transparent;
+}
+
+.request-tabs__tab {
+    padding: 10px 40px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #888;
+    background: none;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+}
+
+.request-tabs__tab:hover {
+    color: #1c1c1c;
+}
+
+.request-tabs__tab--active {
+    color: #1c1c1c;
+    font-weight: 700;
+}
+
+/* テーブルラッパー（タブと独立した白いカード） */
+.request-table-wrapper {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* テーブル */
+.request-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+/* ヘッダー行 */
+.request-table thead tr {
+    border-bottom: 1px solid #d0d0d0;
+}
+
+.request-table__th {
+    padding: 14px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+    text-align: center;
+    letter-spacing: 0.03em;
+    background-color: #fff;
+}
+
+.request-table__th--detail {
+    width: 10%;
+}
+
+/* ボディ行 */
+.request-table__row {
+    border-bottom: 1px solid #ebebeb;
+    transition: background-color 0.15s;
+}
+
+.request-table__row:last-child {
+    border-bottom: none;
+}
+
+.request-table__row:hover {
+    background-color: #fafafa;
+}
+
+.request-table__td {
+    padding: 13px 16px;
+    font-size: 14px;
+    color: #1c1c1c;
+    text-align: center;
+    letter-spacing: 0.02em;
+}
+
+.request-table__td--name {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* 申請理由：1行で省略・左揃え */
+.request-table__td--remarks {
+    max-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+
+.request-table__td--detail {
+    text-align: center;
+}
+
+/* 詳細リンク */
+.request-table__detail-link {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1c1c1c;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: opacity 0.2s;
+}
+
+.request-table__detail-link:hover {
+    opacity: 0.5;
+}
+
+/* 空状態 */
+.request-table__empty {
+    padding: 40px 16px;
+    font-size: 14px;
+    color: #888;
+    text-align: center;
+}
+
+/* =========================================
+   レスポンシブ
+   ========================================= */
+
+@media (min-width: 1400px) {
+    .request-container {
+        max-width: 1100px;
+    }
+
+    .request-main {
+        padding: 72px 40px 80px;
+    }
+}
+
+@media (min-width: 1540px) {
+    .request-main {
+        padding: 72px 80px 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .request-main {
+        padding: 32px 16px 60px;
+    }
+
+    .request-title {
+        font-size: 17px;
+        margin-bottom: 20px;
+    }
+
+    .request-tabs__tab {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+
+    .request-table__th,
+    .request-table__td {
+        padding: 10px 8px;
+        font-size: 12px;
+    }
+}

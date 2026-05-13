@@ -1,0 +1,306 @@
+/* =========================================
+   attendance-detail.css – 勤怠詳細画面
+   ========================================= */
+
+/* メインレイアウト */
+.detail-main {
+    background-color: #f0f0f0;
+    min-height: calc(100vh - 63px);
+    padding: 48px 40px 80px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* コンテナ */
+.detail__container {
+    width: 100%;
+    max-width: 900px;
+}
+
+/* ページタイトル */
+.detail__title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1c1c1c;
+    margin-bottom: 32px;
+    padding-left: 16px;
+    border-left: 4px solid #1c1c1c;
+    letter-spacing: 0.02em;
+}
+
+/* 承認待ちメッセージ（カード外・右寄せ・赤） */
+.detail__pending-message {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 24px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #c00;
+    letter-spacing: 0.02em;
+}
+
+/* バリデーションエラー */
+.detail__errors {
+    background-color: #fff0f0;
+    border: 1px solid #f5c6cb;
+    border-radius: 6px;
+    padding: 12px 16px 12px 28px;
+    margin-bottom: 24px;
+    list-style: disc;
+}
+
+.detail__error-item {
+    font-size: 13px;
+    color: #c00;
+    margin-bottom: 4px;
+    letter-spacing: 0.01em;
+}
+
+.detail__error-item:last-child {
+    margin-bottom: 0;
+}
+
+/* フォームカード */
+.detail__form {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+/* 行 */
+.detail__row {
+    display: flex;
+    align-items: center;
+    padding: 20px 32px;
+    border-bottom: 1px solid #e8e8e8;
+    min-height: 72px;
+    box-sizing: border-box;
+}
+
+.detail__row:last-of-type {
+    border-bottom: none;
+}
+
+.detail__row--remarks {
+    align-items: flex-start;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* ラベル列 */
+.detail__label {
+    width: 200px;
+    flex-shrink: 0;
+    font-size: 14px;
+    color: #888;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+}
+
+/* 値列 */
+.detail__value {
+    flex: 1;
+    font-size: 15px;
+    font-weight: 500;
+    color: #1c1c1c;
+    letter-spacing: 0.01em;
+}
+
+/* 日付表示 */
+.detail__value--date {
+    display: flex;
+    gap: 40px;
+    align-items: baseline;
+}
+
+.detail__date-year,
+.detail__date-day {
+    font-size: 15px;
+    font-weight: 500;
+    color: #1c1c1c;
+}
+
+/* 時刻範囲（出勤・退勤 / 休憩） */
+.detail__value--time-range {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* 時刻入力フィールド */
+.detail__time-input {
+    width: 88px;
+    padding: 8px 10px;
+    border: 1.5px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1c1c1c;
+    background-color: #fff;
+    text-align: center;
+    letter-spacing: 0.04em;
+    box-sizing: border-box;
+    transition: border-color 0.18s;
+    outline: none;
+    font-family: inherit;
+}
+
+.detail__time-input:focus {
+    border-color: #1c1c1c;
+}
+
+.detail__time-input--error {
+    border-color: #c00;
+}
+
+.detail__time-input:disabled {
+    background-color: #f5f5f5;
+    color: #999;
+    cursor: not-allowed;
+}
+
+/* 〜 区切り */
+.detail__tilde {
+    font-size: 16px;
+    color: #666;
+    font-weight: 400;
+    user-select: none;
+}
+
+/* 備考テキストエリア */
+.detail__remarks {
+    width: 100%;
+    max-width: 380px;
+    padding: 10px 12px;
+    border: 1.5px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1c1c1c;
+    background-color: #fff;
+    resize: vertical;
+    font-family: inherit;
+    letter-spacing: 0.01em;
+    line-height: 1.6;
+    box-sizing: border-box;
+    transition: border-color 0.18s;
+    outline: none;
+}
+
+.detail__remarks:focus {
+    border-color: #1c1c1c;
+}
+
+.detail__remarks--error {
+    border-color: #c00;
+}
+
+.detail__remarks:disabled {
+    background-color: #f5f5f5;
+    color: #999;
+    cursor: not-allowed;
+}
+
+/* 修正ボタンエリア（白いカードの外） */
+.detail__actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 24px;
+}
+
+/* 修正ボタン */
+.detail__submit-button {
+    width: 120px;
+    padding: 14px 0;
+    background-color: #1c1c1c;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-family: inherit;
+}
+
+.detail__submit-button:hover {
+    background-color: #333;
+}
+
+/* 承認済みボタン（detail.blade.php で使用） */
+.detail__submit-button--approved {
+    background-color: #999;
+    cursor: default;
+}
+
+.detail__submit-button--approved:hover {
+    background-color: #999;
+}
+
+/* =========================================
+   レスポンシブ
+   ========================================= */
+
+@media (min-width: 1400px) {
+    .detail-main {
+        padding: 48px 64px 80px;
+    }
+
+    .detail__container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1540px) {
+    .detail-main {
+        padding: 48px 80px 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .detail-main {
+        padding: 24px 16px 60px;
+    }
+
+    .detail__title {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .detail__row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 14px 16px;
+        min-height: unset;
+    }
+
+    .detail__label {
+        width: auto;
+        font-size: 13px;
+    }
+
+    .detail__value--date {
+        gap: 20px;
+    }
+
+    .detail__time-input {
+        width: 76px;
+    }
+
+    .detail__remarks {
+        max-width: 100%;
+    }
+
+    .detail__actions {
+        margin-top: 16px;
+    }
+
+    .detail__submit-button {
+        width: 100px;
+        font-size: 15px;
+    }
+}

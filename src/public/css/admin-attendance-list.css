@@ -1,0 +1,234 @@
+/* =========================================
+   admin-attendance-list.css – 管理者 日次勤怠一覧画面
+   ========================================= */
+
+/* メインレイアウト */
+.list-main {
+    background-color: #f5f5f5;
+    min-height: calc(100vh - 63px);
+    padding: 60px 20px 80px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.list-container {
+    width: 100%;
+    max-width: 820px;
+}
+
+/* ページタイトル行 */
+.list-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+
+/* ページタイトル */
+.list-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1c1c1c;
+    margin-bottom: 0;
+    padding-left: 14px;
+    border-left: 4px solid #1c1c1c;
+    letter-spacing: 0.03em;
+}
+
+/* 日付ナビゲーション */
+.list-day-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 16px 24px;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 16px;
+}
+
+.list-day-nav__arrow {
+    color: #1c1c1c;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: opacity 0.2s;
+    white-space: nowrap;
+}
+
+.list-day-nav__arrow:hover {
+    opacity: 0.55;
+}
+
+.list-day-nav__current {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.list-day-nav__icon {
+    display: flex;
+        align-items: center;
+        color: #1c1c1c;
+}
+
+.list-day-nav__label {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1c1c1c;
+    letter-spacing: 0.05em;
+}
+
+/* テーブルラッパー */
+.list-table-wrapper {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* テーブル */
+.list-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+/* ヘッダー行 */
+.list-table thead tr {
+    border-bottom: 1px solid #d0d0d0;
+}
+
+.list-table__th {
+    padding: 14px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+    text-align: center;
+    letter-spacing: 0.03em;
+    background-color: #fff;
+}
+
+.list-table__th--name {
+    text-align: left;
+    padding-left: 24px;
+    width: 22%;
+}
+
+.list-table__th--detail {
+    width: 12%;
+}
+
+/* ボディ行 */
+.list-table__row {
+    border-bottom: 1px solid #ebebeb;
+    transition: background-color 0.15s;
+}
+
+.list-table__row:last-child {
+    border-bottom: none;
+}
+
+.list-table__row:hover {
+    background-color: #fafafa;
+}
+
+.list-table__td {
+    padding: 13px 16px;
+    font-size: 14px;
+    color: #1c1c1c;
+    text-align: center;
+    letter-spacing: 0.02em;
+}
+
+.list-table__td--name {
+    text-align: left;
+    padding-left: 24px;
+    font-weight: 500;
+    color: #1c1c1c;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.list-table__td--detail {
+    text-align: center;
+}
+
+/* 詳細リンク */
+.list-table__detail-link {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1c1c1c;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: opacity 0.2s;
+}
+
+.list-table__detail-link:hover {
+    opacity: 0.5;
+}
+
+.list-table__detail-link--disabled {
+    color: #bbb;
+    cursor: default;
+    pointer-events: none;
+}
+
+/* =========================================
+   レスポンシブ
+   ========================================= */
+
+@media (min-width: 1400px) {
+    .list-container {
+        max-width: 900px;
+    }
+
+    .list-main {
+        padding: 72px 40px 80px;
+    }
+}
+
+@media (min-width: 1540px) {
+    .list-main {
+        padding: 72px 80px 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .list-main {
+        padding: 32px 16px 60px;
+    }
+
+    .list-title {
+        font-size: 17px;
+        margin-bottom: 20px;
+    }
+
+    .list-day-nav {
+        padding: 12px 16px;
+    }
+
+    .list-day-nav__label {
+        font-size: 15px;
+    }
+
+    .list-day-nav__arrow {
+        font-size: 12px;
+    }
+
+    .list-table__th,
+    .list-table__td {
+        padding: 10px 8px;
+        font-size: 12px;
+    }
+
+    .list-table__th--name,
+    .list-table__td--name {
+        padding-left: 12px;
+    }
+}

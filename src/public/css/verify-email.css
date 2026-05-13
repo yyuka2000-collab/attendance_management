@@ -1,0 +1,151 @@
+/* =========================================
+   verify-email.css – メール認証誘導画面
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background-color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ヘッダー */
+.header {
+    background-color: #1a1a1a;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.header__inner {
+    width: 100%;
+    padding: 0 40px;
+}
+
+.header__logo img {
+    height: 28px;
+    display: block;
+}
+
+/* メイン */
+.main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.verify {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding: 80px 20px;
+}
+
+.verify__message {
+    font-size: 20px;
+    color: #1a1a1a;
+    line-height: 1.9;
+    text-align: center;
+}
+
+.verify__button {
+    display: inline-block;
+    width: 280px;
+    padding: 18px 0;
+    background-color: #d9d9d9;
+    color: #1a1a1a;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 1px solid #1a1a1a;
+    cursor: pointer;
+}
+
+.verify__button:hover {
+    background-color: #c8c8c8;
+}
+
+.verify__resend {
+    background: none;
+    border: none;
+    color: #3498db;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.verify__resend:hover {
+    text-decoration: underline;
+}
+
+/* =========================================
+   レスポンシブ追加 – PC大画面 (1400-1540px)
+   ========================================= */
+
+@media (min-width: 1400px) {
+    .header__inner {
+        padding: 0 64px;
+    }
+
+    .verify {
+        gap: 40px;
+        padding: 100px 48px;
+    }
+
+    .verify__message {
+        font-size: 22px;
+    }
+
+    .verify__button {
+        width: 320px;
+        padding: 20px 0;
+        font-size: 22px;
+    }
+
+    .verify__resend {
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 1540px) {
+    .header__inner {
+        padding: 0 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header__inner {
+        padding: 0 20px;
+    }
+
+    .verify {
+        gap: 24px;
+        padding: 60px 16px;
+    }
+
+    .verify__message {
+        font-size: 16px;
+    }
+
+    .verify__button {
+        width: 100%;
+        max-width: 280px;
+        font-size: 17px;
+        padding: 16px 0;
+    }
+
+    .verify__resend {
+        font-size: 14px;
+    }
+}
